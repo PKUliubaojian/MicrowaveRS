@@ -6,9 +6,10 @@ function [Reflectivity_v,Reflectivity_h,Transmissivity_v,Transmissivity_h]=Ref_T
 
 %%
 %to test the code
-%[Rv,Rh,Tv,Th]=Ref_Trans_pow(incident,1,5+12i)
-%plot(incident,Th,incident,Rh,incident,Rv,incident,Tv)
-%legend Th Rh Rv Tv
+%incident=0:0.01:pi/2;
+%[Rv,Rh,Tv,Th]=Ref_Trans_pow(incident,1,5+12i);
+%plot(incident,Th,incident,Rh,incident,Rv,incident,Tv);
+%legend Th Rh Rv Tv;
 %%
     [Rv,Rh,~,~]=Ref_Trans(theta,e1,e2);
     Reflectivity_v=abs(Rv.^2);
