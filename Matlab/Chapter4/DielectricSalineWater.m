@@ -4,7 +4,7 @@ function eps=DielectricSalineWater(T,frequency,S)
 %e is complex permitivity,frequency is in Hz,S is Salinity is in psu
 %2018.8.22,Baojian Liu, powered by Matlab 2018a
 %Chapter 4-3 in Microwave Radar and Radiometric Remote sensing, Ulaby et al.
-%Seemingly,there are some issues in equation P125~127 and need to be fixed
+
 if(any(frequency>1e12))
     msgID = 'MATLAB:inputError';
     msgtext = 'frequency should be<=1000GHz.';
