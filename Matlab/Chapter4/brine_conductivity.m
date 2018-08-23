@@ -2,7 +2,7 @@ function [condutivity,N]=brine_conductivity(T,sal)
 %Brine salinity as function of temperature
 %   cond:   Brine conductivity [S/m]
 %   sal:    Salinity [psu]
-%   T:      Temperature [C] -43.2-1.8oC
+%   T:      Temperature [C] [-43.2,-1.8oC]
 %2018.8.23,Baojian Liu, powered by Matlab 2018a
 %Chapter 4-5 in Microwave Radar and Radiometric Remote sensing, Ulaby et al.
     N = brine_normality(sal);
