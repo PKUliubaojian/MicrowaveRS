@@ -10,9 +10,9 @@ function eps=DielectricPureice(T,frequency)
         ME = MException(msgID,msgtext);
         throw(ME)
     end
-    if(any(T>0|T<-40))
+    if(any(T>0))
         msgID = 'MATLAB:inputError';
-        msgtext = "Temperature should be -40-0 centigrade";
+        msgtext = "Temperature should be <0 centigrade";
         ME = MException(msgID,msgtext);
         throw(ME)
     end

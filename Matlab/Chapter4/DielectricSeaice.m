@@ -1,16 +1,12 @@
 function eps=DielectricSeaice(S,T,f,rho)
 % The dielectric constant of saline sea ice with air bubbles.
-% If no air, use rho = []
 % Background information: Ulaby et al. 1986 vol. III.
-% 
-%     [epsi_mix,epsii_mix] = salineicewithairbubbles(sal,T,freq)
-%         epsi_mix:   relative permittivity of mixture (real part of dielectric constant) 
-%         epsii_mix:  dielectric loss factor of mixture (imaginary part of dielectric constant)
-%         T:          temperature [K]
-%         rho:        density [g/cm?]
-%         freq:       frequency [GHz]
-%         
-%     Uses: epureice, ebrine, brine.volume, sphericalinclusions, (randomneedles)    
+% some Python code from https://github.com/maiwinstrup/SICCI
+%    T:          temperature [C]
+%    rho:        density [g/cm?]
+%    f:       frequency [Hz]
+%    S:      salinity in psu     
+%    2018.8.23 powered by Matlab 2018a
     eps_i = DielectricPureice(T,f);
     eps_b = DielectricBrine(T,f);
     vol_b = brine_volume(T,S); 
@@ -19,7 +15,7 @@ function eps=DielectricSeaice(S,T,f,rho)
 
     
     % Dielectric constant of saline sea ice with air bubbles:
-    if varargin > 3
+    if nargin > 3
         % Air volume: 
         rho_ice = 0.926;
         vol_air=(rho_ice-rho)/rho_ice;
