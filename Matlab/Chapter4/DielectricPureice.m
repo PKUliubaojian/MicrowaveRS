@@ -1,5 +1,5 @@
 function eps=DielectricPureice(T,frequency)
-    % The relative permittivity of pure water ice:
+    % The dielectric constant of pure water ice:
     % Derived by Matzler and Wegmuller (1987); Valid for frequency range: 
     % 10MHz to 300 GHz, and temperatures: -40<=T<=0¡ãC
     % By Baojian Liu,2018.8.23, Powered by Matlab 2018a

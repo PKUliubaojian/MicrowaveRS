@@ -3,7 +3,7 @@ function eps=DielectricSeaice(S,T,f,rho)
 % Background information: Ulaby et al. 1986 vol. III.
 % some Python code from https://github.com/maiwinstrup/SICCI
 %    T:          temperature [C]
-%    rho:        density [g/cm?]
+%    rho:        density [g/cm^3]
 %    f:       frequency [Hz]
 %    S:      salinity in psu     
 %    2018.8.23 powered by Matlab 2018a
